@@ -1,25 +1,25 @@
-# Encurtador de URLs - Monorepo
+# Encurtador de URLs
 
-AplicaÁ?o full-stack para encurtar URLs, com backend em **.NET 8**, frontend em **Angular 17**, banco **PostgreSQL** e orquestraÁ?o via **Docker Compose**.
+Aplica√ß?o full-stack para encurtar URLs, com backend em **.NET 8**, frontend em **Angular 17**, banco **PostgreSQL** e orquestra√ß?o via **Docker Compose**.
 
 ## Estrutura do Projeto
 
 ```
 EncurtadorUrl/
-??? backend/                          # AplicaÁ?o .NET 8
+??? backend/                          # Aplica√ß?o .NET 8
 ?   ??? EncurtadorURL.Api/            # API REST + Swagger
-?   ??? EncurtadorURL.Application/    # Interfaces de aplicaÁ?o
+?   ??? EncurtadorURL.Application/    # Interfaces de aplica√ß?o
 ?   ??? EncurtadorURL.Domain/         # Entidades e contratos
-?   ??? EncurtadorURL.Infrastructure/ # EF Core, repositÛrios
-?   ??? EncurtadorUrl.Tests/          # Testes unit·rios (xUnit)
+?   ??? EncurtadorURL.Infrastructure/ # EF Core, reposit√≥rios
+?   ??? EncurtadorUrl.Tests/          # Testes unit√°rios (xUnit)
 ?   ??? Dockerfile
 ?   ??? EncurtadorUrl.sln
 ?
-??? frontend/                         # AplicaÁ?o Angular 17
+??? frontend/                         # Aplica√ß?o Angular 17
 ?   ??? src/app/
 ?   ?   ??? components/
 ?   ?   ?   ??? url-shortener/        # Criar URL curta
-?   ?   ?   ??? url-lookup/           # Consultar por cÛdigo
+?   ?   ?   ??? url-lookup/           # Consultar por c√≥digo
 ?   ?   ?   ??? url-list/             # Listar URLs do banco
 ?   ?   ??? services/url.service.ts   # Cliente HTTP da API
 ?   ??? Dockerfile
@@ -37,7 +37,7 @@ EncurtadorUrl/
 
 ## Quick Start
 
-### PrÈ-requisitos
+### Pr√©-requisitos
 
 - Docker e Docker Compose
 - (Opcional) Node.js 20+ e .NET 8 SDK para desenvolvimento local
@@ -58,7 +58,7 @@ Aguarde os tr?s containers ficarem **healthy** (cerca de 1?2 minutos).
 
 ### Acesso
 
-| ServiÁo    | URL                              |
+| Servi√ßo    | URL                              |
 |------------|----------------------------------|
 | Frontend   | http://localhost:4200            |
 | API        | http://localhost:8080            |
@@ -69,15 +69,15 @@ Aguarde os tr?s containers ficarem **healthy** (cerca de 1?2 minutos).
 
 ## Frontend
 
-A interface possui tr?s ·reas principais:
+A interface possui tr?s √°reas principais:
 
-| Componente       | FunÁ?o                                                                 |
+| Componente       | Fun√ß?o                                                                 |
 |------------------|------------------------------------------------------------------------|
-| **Criar URL Curta** | Encurta uma URL com cÛdigo autom·tico ou alias personalizado        |
-| **Consultar URL por CÛdigo** | Busca uma URL especÌfica via `GET /api/urls/{shortCode}`   |
+| **Criar URL Curta** | Encurta uma URL com c√≥digo autom√°tico ou alias personalizado        |
+| **Consultar URL por C√≥digo** | Busca uma URL espec√≠fica via `GET /api/urls/{shortCode}`   |
 | **URLs Encurtadas Recentes** | Lista todas as URLs do banco, ordenadas da mais recente     |
 
-A lista È atualizada automaticamente apÛs criar uma nova URL.
+A lista √© atualizada automaticamente ap√≥s criar uma nova URL.
 
 ### Desenvolvimento local
 
@@ -87,15 +87,15 @@ npm install
 npm start
 ```
 
-AplicaÁ?o em: http://localhost:4200
+Aplica√ß?o em: http://localhost:4200
 
-O serviÁo `UrlService` aponta por padr?o para `http://localhost:8080`.
+O servi√ßo `UrlService` aponta por padr?o para `http://localhost:8080`.
 
 ---
 
 ## API
 
-DocumentaÁ?o interativa disponÌvel em http://localhost:8080/swagger (ambiente Development).
+Documenta√ß?o interativa dispon√≠vel em http://localhost:8080/swagger (ambiente Development).
 
 ### Endpoints
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 }
 ```
 
-`alias` È opcional. Retorna **201 Created**:
+`alias` √© opcional. Retorna **201 Created**:
 
 ```json
 {
@@ -125,7 +125,7 @@ Content-Type: application/json
 GET /api/urls
 ```
 
-Retorna **200 OK** com array ordenado por data de criaÁ?o (mais recente primeiro):
+Retorna **200 OK** com array ordenado por data de cria√ß?o (mais recente primeiro):
 
 ```json
 [
@@ -138,7 +138,7 @@ Retorna **200 OK** com array ordenado por data de criaÁ?o (mais recente primeiro
 ]
 ```
 
-#### Obter URL original por cÛdigo
+#### Obter URL original por c√≥digo
 
 ```http
 GET /api/urls/{shortCode}
@@ -166,13 +166,13 @@ GET /health
 
 Retorna **200 OK**: `{"status":"Healthy"}`
 
-### CÛdigos de erro comuns
+### C√≥digos de erro comuns
 
-| Status | SituaÁ?o                          |
+| Status | Situa√ß?o                          |
 |--------|-----------------------------------|
-| 400    | URL original inv·lida             |
-| 404    | CÛdigo curto n?o encontrado       |
-| 409    | Alias j· em uso                   |
+| 400    | URL original inv√°lida             |
+| 404    | C√≥digo curto n?o encontrado       |
+| 409    | Alias j√° em uso                   |
 
 ### Desenvolvimento local
 
@@ -185,27 +185,27 @@ dotnet test
 
 Swagger local: http://localhost:5156/swagger
 
-Por padr?o, o desenvolvimento local usa **SQLite** (`encurtadorurl.db`). No Docker, a API usa **PostgreSQL** automaticamente via vari·vel de ambiente.
+Por padr?o, o desenvolvimento local usa **SQLite** (`encurtadorurl.db`). No Docker, a API usa **PostgreSQL** automaticamente via vari√°vel de ambiente.
 
 ---
 
 ## Banco de Dados
 
-### Docker (produÁ?o local)
+### Docker (produ√ß?o local)
 
 O `docker-compose.yml` sobe um container PostgreSQL 16 com:
 
-| Par‚metro  | Valor            |
+| Par√¢metro  | Valor            |
 |------------|------------------|
 | Host       | `localhost`      |
 | Porta      | `5433`           |
 | Database   | `encurtadorurl`  |
-| Usu·rio    | `encurtador`     |
+| Usu√°rio    | `encurtador`     |
 | Senha      | `encurtador123`  |
 
-> A porta **5433** È usada no host para evitar conflito com outras inst‚ncias PostgreSQL na m·quina. Dentro da rede Docker, a API conecta em `db:5432`.
+> A porta **5433** √© usada no host para evitar conflito com outras inst√¢ncias PostgreSQL na m√°quina. Dentro da rede Docker, a API conecta em `db:5432`.
 
-A tabela `Urls` È criada automaticamente na inicializaÁ?o da API (`EnsureCreated`).
+A tabela `Urls` √© criada automaticamente na inicializa√ß?o da API (`EnsureCreated`).
 
 ### Conectar com DBeaver
 
@@ -217,7 +217,7 @@ A tabela `Urls` È criada automaticamente na inicializaÁ?o da API (`EnsureCreated
    - **Username:** `encurtador`
    - **Password:** `encurtador123`
 3. Clique em **Test Connection** ? **Finish**
-4. Navegue atÈ: `Schemas ? public ? Tables ? Urls`
+4. Navegue at√©: `Schemas ? public ? Tables ? Urls`
 
 Consulta de exemplo:
 
@@ -239,7 +239,7 @@ Sem Docker, o backend usa SQLite por padr?o (`appsettings.json`):
 }
 ```
 
-Para usar PostgreSQL localmente, altere a connection string ou defina a vari·vel:
+Para usar PostgreSQL localmente, altere a connection string ou defina a vari√°vel:
 
 ```bash
 ConnectionStrings__DefaultConnection=Host=localhost;Port=5433;Database=encurtadorurl;Username=encurtador;Password=encurtador123
@@ -249,7 +249,7 @@ ConnectionStrings__DefaultConnection=Host=localhost;Port=5433;Database=encurtado
 
 ## Docker
 
-### ServiÁos
+### Servi√ßos
 
 | Container              | Imagem              | Porta host |
 |------------------------|---------------------|------------|
@@ -257,7 +257,7 @@ ConnectionStrings__DefaultConnection=Host=localhost;Port=5433;Database=encurtado
 | `encurtadorurl-api`    | `encurtadorurl-api` | 8080       |
 | `encurtadorurl-frontend` | `encurtadorurl-frontend` | 4200  |
 
-### Comandos ˙teis
+### Comandos √∫teis
 
 ```bash
 # Iniciar em background
@@ -312,9 +312,9 @@ docker run -p 5433:5432 \
 ### Backend ? Clean Architecture
 
 ```
-Domain         ? Entidades, interfaces de repositÛrio
-Application    ? Interfaces de serviÁos (IShortCodeGenerator)
-Infrastructure ? EF Core, repositÛrios, Hashids
+Domain         ? Entidades, interfaces de reposit√≥rio
+Application    ? Interfaces de servi√ßos (IShortCodeGenerator)
+Infrastructure ? EF Core, reposit√≥rios, Hashids
 API            ? Controllers, Swagger, DI, CORS
 ```
 
@@ -323,27 +323,27 @@ API            ? Controllers, Swagger, DI, CORS
 - Componentes standalone sem NgModules
 - `provideHttpClient()` para chamadas ? API
 - Estilos SCSS por componente
-- ServiÁo centralizado `UrlService` para todos os endpoints
+- Servi√ßo centralizado `UrlService` para todos os endpoints
 
 ### CORS
 
 - **Development:** `http://localhost:4200`, `http://localhost:3000`, `http://localhost:5156`
-- **Production:** domÌnios configurados em `Program.cs`
+- **Production:** dom√≠nios configurados em `Program.cs`
 
 ---
 
 ## Funcionalidades
 
-- Encurtamento de URL com cÛdigo Base62 (Hashids)
-- Alias personalizado com validaÁ?o de duplicidade
+- Encurtamento de URL com c√≥digo Base62 (Hashids)
+- Alias personalizado com valida√ß?o de duplicidade
 - Redirecionamento HTTP 302
 - Listagem de URLs com dados reais do PostgreSQL
-- Consulta individual por cÛdigo curto
-- Motor sincronizado para geraÁ?o concorrente de cÛdigos
-- ContainerizaÁ?o completa (API + Frontend + Banco)
+- Consulta individual por c√≥digo curto
+- Motor sincronizado para gera√ß?o concorrente de c√≥digos
+- Containeriza√ß?o completa (API + Frontend + Banco)
 - Swagger/OpenAPI em ambiente Development
 - Conex?o externa ao banco via DBeaver (porta 5433)
-- Testes unit·rios com xUnit
+- Testes unit√°rios com xUnit
 
 ---
 
@@ -351,7 +351,7 @@ API            ? Controllers, Swagger, DI, CORS
 
 ### "URL n?o encontrada" no frontend
 
-- Confirme que a API est· rodando: `curl http://localhost:8080/health`
+- Confirme que a API est√° rodando: `curl http://localhost:8080/health`
 - Verifique se `UrlService.apiUrl` aponta para `http://localhost:8080`
 - Confira os logs de CORS: `docker compose logs api`
 
@@ -370,7 +370,7 @@ docker compose up --build
 - Use a porta **5433**, n?o 5432
 - Credenciais: `encurtador` / `encurtador123`
 
-### Porta j· em uso
+### Porta j√° em uso
 
 Altere as portas no `docker-compose.yml`:
 
@@ -403,15 +403,15 @@ ports:
 ## Contribuindo
 
 1. Crie uma branch: `git checkout -b feature/sua-feature`
-2. Commit suas mudanÁas: `git commit -am 'Add nova feature'`
+2. Commit suas mudan√ßas: `git commit -am 'Add nova feature'`
 3. Push: `git push origin feature/sua-feature`
 4. Abra um Pull Request
 
 ---
 
-## LicenÁa
+## Licen√ßa
 
-Este projeto est· sob licenÁa MIT.
+Este projeto est√° sob licen√ßa MIT.
 
 ---
 
