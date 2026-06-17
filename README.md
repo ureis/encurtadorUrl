@@ -1,36 +1,36 @@
 # Encurtador de URLs
 
-Aplicaç?o full-stack para encurtar URLs, com backend em **.NET 8**, frontend em **Angular 17**, banco **PostgreSQL** e orquestraç?o via **Docker Compose**.
+Aplicação full-stack para encurtar URLs, com backend em **.NET 8**, frontend em **Angular 17**, banco **PostgreSQL** e orquestração via **Docker Compose**.
 
 ## Estrutura do Projeto
 
 ```
 EncurtadorUrl/
-??? backend/                          # Aplicaç?o .NET 8
-?   ??? EncurtadorURL.Api/            # API REST + Swagger
-?   ??? EncurtadorURL.Application/    # Interfaces de aplicaç?o
-?   ??? EncurtadorURL.Domain/         # Entidades e contratos
-?   ??? EncurtadorURL.Infrastructure/ # EF Core, repositórios
-?   ??? EncurtadorUrl.Tests/          # Testes unitários (xUnit)
-?   ??? Dockerfile
-?   ??? EncurtadorUrl.sln
-?
-??? frontend/                         # Aplicaç?o Angular 17
-?   ??? src/app/
-?   ?   ??? components/
-?   ?   ?   ??? url-shortener/        # Criar URL curta
-?   ?   ?   ??? url-lookup/           # Consultar por código
-?   ?   ?   ??? url-list/             # Listar URLs do banco
-?   ?   ??? services/url.service.ts   # Cliente HTTP da API
-?   ??? Dockerfile
-?   ??? nginx.conf
-?
-??? database/                         # PostgreSQL (Docker)
-?   ??? Dockerfile
-?
-??? docker-compose.yml
-??? .env.example
-??? README.md
+├── backend/                          # Aplicação .NET 8
+│   ├── EncurtadorURL.Api/            # API REST + Swagger
+│   ├── EncurtadorURL.Domain/         # Entidades e contratos
+│   ├── EncurtadorURL.Infrastructure/ # EF Core, repositórios
+│   ├── EncurtadorUrl.Tests/          # Testes unitários (xUnit)
+│   ├── Dockerfile
+│   ├── EncurtadorUrl.sln
+│   └── EncurtadorURL.Application/    # Interfaces de aplicação
+│
+├── frontend/                         # Aplicação Angular 17
+│   ├── src/app/
+│   │   ├── components/
+│   │   │   ├── url-shortener/        # Criar URL curta
+│   │   │   ├── url-lookup/           # Consultar por código
+│   │   │   └── url-list/             # Listar URLs do banco
+│   │   └── services/url.service.ts   # Cliente HTTP da API
+│   ├── Dockerfile
+│   └── nginx.conf
+│
+├── database/                         # PostgreSQL (Docker)
+│   └── Dockerfile
+│
+├── docker-compose.yml
+├── .env.example
+└── README.md
 ```
 
 ---
@@ -46,7 +46,7 @@ EncurtadorUrl/
 ### Executar com Docker Compose
 
 ```bash
-git clone <seu-repositorio>
+git clone <seu-repositório>
 cd EncurtadorUrl
 
 cp .env.example .env
@@ -54,7 +54,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-Aguarde os tr?s containers ficarem **healthy** (cerca de 1?2 minutos).
+Aguarde os três containers ficarem **healthy** (cerca de 1 a 2 minutos).
 
 ### Acesso
 
@@ -69,9 +69,9 @@ Aguarde os tr?s containers ficarem **healthy** (cerca de 1?2 minutos).
 
 ## Frontend
 
-A interface possui tr?s áreas principais:
+A interface possui três áreas principais:
 
-| Componente       | Funç?o                                                                 |
+| Componente       | Função                                                                 |
 |------------------|------------------------------------------------------------------------|
 | **Criar URL Curta** | Encurta uma URL com código automático ou alias personalizado        |
 | **Consultar URL por Código** | Busca uma URL específica via `GET /api/urls/{shortCode}`   |
@@ -87,15 +87,15 @@ npm install
 npm start
 ```
 
-Aplicaç?o em: http://localhost:4200
+Aplicação em: http://localhost:4200
 
-O serviço `UrlService` aponta por padr?o para `http://localhost:8080`.
+O serviço `UrlService` aponta por padrão para `http://localhost:8080`.
 
 ---
 
 ## API
 
-Documentaç?o interativa disponível em http://localhost:8080/swagger (ambiente Development).
+Documentação interativa disponível em http://localhost:8080/swagger (ambiente Development).
 
 ### Endpoints
 
@@ -125,7 +125,7 @@ Content-Type: application/json
 GET /api/urls
 ```
 
-Retorna **200 OK** com array ordenado por data de criaç?o (mais recente primeiro):
+Retorna **200 OK** com array ordenado por data de criação (mais recente primeiro):
 
 ```json
 [
@@ -168,10 +168,10 @@ Retorna **200 OK**: `{"status":"Healthy"}`
 
 ### Códigos de erro comuns
 
-| Status | Situaç?o                          |
+| Status | Situação                          |
 |--------|-----------------------------------|
 | 400    | URL original inválida             |
-| 404    | Código curto n?o encontrado       |
+| 404    | Código curto não encontrado       |
 | 409    | Alias já em uso                   |
 
 ### Desenvolvimento local
@@ -185,13 +185,13 @@ dotnet test
 
 Swagger local: http://localhost:5156/swagger
 
-Por padr?o, o desenvolvimento local usa **SQLite** (`encurtadorurl.db`). No Docker, a API usa **PostgreSQL** automaticamente via variável de ambiente.
+Por padrão, o desenvolvimento local usa **SQLite** (`encurtadorurl.db`). No Docker, a API usa **PostgreSQL** automaticamente via variável de ambiente.
 
 ---
 
 ## Banco de Dados
 
-### Docker (produç?o local)
+### Docker (produção local)
 
 O `docker-compose.yml` sobe um container PostgreSQL 16 com:
 
@@ -205,19 +205,19 @@ O `docker-compose.yml` sobe um container PostgreSQL 16 com:
 
 > A porta **5433** é usada no host para evitar conflito com outras instâncias PostgreSQL na máquina. Dentro da rede Docker, a API conecta em `db:5432`.
 
-A tabela `Urls` é criada automaticamente na inicializaç?o da API (`EnsureCreated`).
+A tabela `Urls` é criada automaticamente na inicialização da API (`EnsureCreated`).
 
 ### Conectar com DBeaver
 
-1. Abra o DBeaver ? **Nova Conex?o** ? **PostgreSQL**
+1. Abra o DBeaver → **Nova Conexão** → **PostgreSQL**
 2. Preencha:
    - **Host:** `localhost`
    - **Port:** `5433`
    - **Database:** `encurtadorurl`
    - **Username:** `encurtador`
    - **Password:** `encurtador123`
-3. Clique em **Test Connection** ? **Finish**
-4. Navegue até: `Schemas ? public ? Tables ? Urls`
+3. Clique em **Test Connection** → **Finish**
+4. Navegue até: `Schemas → public → Tables → Urls`
 
 Consulta de exemplo:
 
@@ -229,7 +229,7 @@ ORDER BY "CreatedAt" DESC;
 
 ### Desenvolvimento local (SQLite)
 
-Sem Docker, o backend usa SQLite por padr?o (`appsettings.json`):
+Sem Docker, o backend usa SQLite por padrão (`appsettings.json`):
 
 ```json
 {
@@ -309,19 +309,19 @@ docker run -p 5433:5432 \
 
 ## Arquitetura
 
-### Backend ? Clean Architecture
+### Backend — Clean Architecture
 
 ```
-Domain         ? Entidades, interfaces de repositório
-Application    ? Interfaces de serviços (IShortCodeGenerator)
-Infrastructure ? EF Core, repositórios, Hashids
-API            ? Controllers, Swagger, DI, CORS
+Domain         → Entidades, interfaces de repositório
+Application    → Interfaces de serviços (IShortCodeGenerator)
+Infrastructure → EF Core, repositórios, Hashids
+API            → Controllers, Swagger, DI, CORS
 ```
 
-### Frontend ? Standalone Components (Angular 17+)
+### Frontend — Standalone Components (Angular 17+)
 
 - Componentes standalone sem NgModules
-- `provideHttpClient()` para chamadas ? API
+- `provideHttpClient()` para chamadas à API
 - Estilos SCSS por componente
 - Serviço centralizado `UrlService` para todos os endpoints
 
@@ -335,27 +335,27 @@ API            ? Controllers, Swagger, DI, CORS
 ## Funcionalidades
 
 - Encurtamento de URL com código Base62 (Hashids)
-- Alias personalizado com validaç?o de duplicidade
+- Alias personalizado com validação de duplicidade
 - Redirecionamento HTTP 302
 - Listagem de URLs com dados reais do PostgreSQL
 - Consulta individual por código curto
-- Motor sincronizado para geraç?o concorrente de códigos
-- Containerizaç?o completa (API + Frontend + Banco)
+- Motor sincronizado para geração concorrente de códigos
+- Containerização completa (API + Frontend + Banco)
 - Swagger/OpenAPI em ambiente Development
-- Conex?o externa ao banco via DBeaver (porta 5433)
+- Conexão externa ao banco via DBeaver (porta 5433)
 - Testes unitários com xUnit
 
 ---
 
 ## Troubleshooting
 
-### "URL n?o encontrada" no frontend
+### "URL não encontrada" no frontend
 
 - Confirme que a API está rodando: `curl http://localhost:8080/health`
 - Verifique se `UrlService.apiUrl` aponta para `http://localhost:8080`
 - Confira os logs de CORS: `docker compose logs api`
 
-### Containers n?o iniciam
+### Containers não iniciam
 
 ```bash
 docker compose logs api
@@ -364,10 +364,10 @@ docker compose down -v
 docker compose up --build
 ```
 
-### Erro de conex?o no DBeaver
+### Erro de conexão no DBeaver
 
 - Container `encurtadorurl-db` deve estar **Up (healthy)**
-- Use a porta **5433**, n?o 5432
+- Use a porta **5433**, não 5432
 - Credenciais: `encurtador` / `encurtador123`
 
 ### Porta já em uso
@@ -383,7 +383,7 @@ ports:
 
 ---
 
-## Depend?ncias Principais
+## Dependências Principais
 
 **Backend:**
 - .NET 8, ASP.NET Core
