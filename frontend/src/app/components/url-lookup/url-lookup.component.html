@@ -1,0 +1,55 @@
+<div class="lookup-container">
+  <h2>Consultar URL por Código</h2>
+  <p class="description">Busque uma URL específica quando a lista de recentes estiver muito grande.</p>
+
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <div class="form-group">
+    <label for="shortCode">Código Curto:</label>
+    <input
+      type="text"
+      id="shortCode"
+      [(ngModel)]="shortCode"
+      placeholder="ex: swagger-teste ou a7gydYq"
+      [disabled]="loading"
+      class="form-control"
+      (keyup.enter)="lookupUrl()"
+    />
+  </div>
+
+  <div class="button-group">
+    <button (click)="lookupUrl()" [disabled]="loading" class="btn btn-primary">
+      {{ loading ? 'Consultando...' : 'Consultar' }}
+    </button>
+    <button (click)="reset()" [disabled]="loading" class="btn btn-secondary">
+      Limpar
+    </button>
+  </div>
+
+  <div *ngIf="result" class="url-item">
+    <div class="url-details">
+      <div class="short-code">
+        <span class="badge">{{ result.shortCode }}</span>
+      </div>
+      <div class="original-url">
+        <p class="label">Original:</p>
+        <p class="url">{{ result.originalUrl }}</p>
+      </div>
+      <div class="short-url">
+        <p class="label">Curta:</p>
+        <p class="url">{{ result.shortUrl }}</p>
+      </div>
+    </div>
+
+    <div class="url-actions">
+      <button (click)="copyToClipboard(result.shortUrl)" class="btn btn-copy" title="Copiar URL curta">
+        Copiar
+      </button>
+      <button (click)="openShortUrl(result.shortUrl)" class="btn btn-open" title="Abrir URL curta">
+        Abrir
+      </button>
+    </div>
+  </div>
+</div>

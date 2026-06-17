@@ -1,0 +1,79 @@
+services:
+  # Banco de dados PostgreSQL (acessível via DBeaver na porta 5433 do host)
+  db:
+    container_name: encurtadorurl-db
+    build:
+      context: ./database
+      dockerfile: Dockerfile
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: encurtadorurl
+      POSTGRES_USER: encurtador
+      POSTGRES_PASSWORD: encurtador123
+    command: ["postgres", "-c", "listen_addresses=*"]
+    volumes:
+      - encurtadorurl-db-data:/var/lib/postgresql/data
+    networks:
+      - encurtadorurl-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U encurtador -d encurtadorurl"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+  # Backend - API .NET
+  api:
+    container_name: encurtadorurl-api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        ENVIRONMENT: Development
+    ports:
+      - "8080:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5432;Database=encurtadorurl;Username=encurtador;Password=encurtador123
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - encurtadorurl-network
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/bin/curl -f http://localhost:8080/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+  # Frontend - Angular com Nginx
+  frontend:
+    container_name: encurtadorurl-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "4200:80"
+    depends_on:
+      api:
+        condition: service_healthy
+    environment:
+      - API_URL=http://api:8080
+    networks:
+      - encurtadorurl-network
+    healthcheck:
+      test: ["CMD-SHELL", "/usr/bin/wget --quiet --tries=1 --spider http://localhost/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+
+networks:
+  encurtadorurl-network:
+    driver: bridge
+
+volumes:
+  encurtadorurl-db-data:

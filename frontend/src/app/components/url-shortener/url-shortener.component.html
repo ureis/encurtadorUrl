@@ -1,0 +1,53 @@
+<div class="shortener-container">
+  <h2>Criar URL Curta</h2>
+
+  <div *ngIf="error" class="alert alert-danger">
+    {{ error }}
+  </div>
+
+  <div class="form-group">
+    <label for="originalUrl">URL Original:</label>
+    <input
+      type="url"
+      id="originalUrl"
+      [(ngModel)]="originalUrl"
+      placeholder="https://exemplo.com/caminho/muito/longo"
+      [disabled]="loading"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="alias">Alias Personalizado (Opcional):</label>
+    <input
+      type="text"
+      id="alias"
+      [(ngModel)]="alias"
+      placeholder="meu-link"
+      [disabled]="loading"
+      class="form-control"
+    />
+  </div>
+
+  <div class="button-group">
+    <button (click)="createShortUrl()" [disabled]="loading" class="btn btn-primary">
+      {{ loading ? 'Encurtando...' : 'Encurtar URL' }}
+    </button>
+    <button (click)="reset()" [disabled]="loading" class="btn btn-secondary">
+      Limpar
+    </button>
+  </div>
+
+  <div *ngIf="shortUrl" class="result">
+    <div class="success">
+      <h3>URL Criada com Sucesso!</h3>
+      <div class="url-box">
+        <p class="label">URL Curta:</p>
+        <p class="url">{{ shortUrl }}</p>
+        <button (click)="copyToClipboard()" class="btn btn-copy">
+          Copiar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

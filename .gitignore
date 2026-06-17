@@ -1,0 +1,45 @@
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backend
+backend/bin/
+backend/obj/
+backend/.vs/
+backend/*.db
+backend/*.db-*
+backend/EncurtadorURL.Api/bin/
+backend/EncurtadorURL.Api/obj/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Misc
+*.bak
+*.tmp
+.cache/
+temp/

@@ -1,0 +1,168 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projetos\\C#\\EncurtadorUrl\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|solutionrelative:encurtadorurl.api\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|solutionrelative:encurtadorurl.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|C:\\Projetos\\C#\\EncurtadorUrl\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|Solution Items{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.api\\controllers\\urlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7836864A-7664-4929-9F40-01377B5D2D41}|EncurtadorURL.Api\\EncurtadorURL.Api.csproj|solutionrelative:encurtadorurl.api\\controllers\\urlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC798AE-0EA4-49C7-8935-382591AE46E7}|EncurtadorURL.Domain\\EncurtadorURL.Domain.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.domain\\urlrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC798AE-0EA4-49C7-8935-382591AE46E7}|EncurtadorURL.Domain\\EncurtadorURL.Domain.csproj|solutionrelative:encurtadorurl.domain\\urlrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{063794A8-6C10-4C4D-968B-3166F40C90C5}|EncurtadorURL.Infrastructure\\EncurtadorURL.Infrastructure.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.infrastructure\\shortcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{063794A8-6C10-4C4D-968B-3166F40C90C5}|EncurtadorURL.Infrastructure\\EncurtadorURL.Infrastructure.csproj|solutionrelative:encurtadorurl.infrastructure\\shortcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{063794A8-6C10-4C4D-968B-3166F40C90C5}|EncurtadorURL.Infrastructure\\EncurtadorURL.Infrastructure.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{063794A8-6C10-4C4D-968B-3166F40C90C5}|EncurtadorURL.Infrastructure\\EncurtadorURL.Infrastructure.csproj|solutionrelative:encurtadorurl.infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{102EE4AF-A3A1-4438-B91B-C337D74FF4C6}|EncurtadorURL.Application\\EncurtadorURL.Application.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.application\\ishortcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{102EE4AF-A3A1-4438-B91B-C337D74FF4C6}|EncurtadorURL.Application\\EncurtadorURL.Application.csproj|solutionrelative:encurtadorurl.application\\ishortcodegenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC798AE-0EA4-49C7-8935-382591AE46E7}|EncurtadorURL.Domain\\EncurtadorURL.Domain.csproj|c:\\projetos\\c#\\encurtadorurl\\encurtadorurl.domain\\iurlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC798AE-0EA4-49C7-8935-382591AE46E7}|EncurtadorURL.Domain\\EncurtadorURL.Domain.csproj|solutionrelative:encurtadorurl.domain\\iurlrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Dockerfile",
+              "RelativeDocumentMoniker": "EncurtadorURL.Api\\Dockerfile",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Dockerfile",
+              "RelativeToolTip": "EncurtadorURL.Api\\Dockerfile",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-16T14:11:25.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-06-16T14:02:39.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UrlController.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Controllers\\UrlController.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Api\\Controllers\\UrlController.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Controllers\\UrlController.cs",
+              "RelativeToolTip": "EncurtadorURL.Api\\Controllers\\UrlController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAnwEUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T02:24:43.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Program.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Api\\Program.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Api\\Program.cs",
+              "RelativeToolTip": "EncurtadorURL.Api\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T02:19:05.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "EncurtadorURL.Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T02:10:18.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShortCodeGenerator.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Infrastructure\\ShortCodeGenerator.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Infrastructure\\ShortCodeGenerator.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Infrastructure\\ShortCodeGenerator.cs",
+              "RelativeToolTip": "EncurtadorURL.Infrastructure\\ShortCodeGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T02:06:53.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IShortCodeGenerator.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Application\\IShortCodeGenerator.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Application\\IShortCodeGenerator.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Application\\IShortCodeGenerator.cs",
+              "RelativeToolTip": "EncurtadorURL.Application\\IShortCodeGenerator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T02:06:08.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUrlRepository.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Domain\\IUrlRepository.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Domain\\IUrlRepository.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Domain\\IUrlRepository.cs",
+              "RelativeToolTip": "EncurtadorURL.Domain\\IUrlRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T01:59:29.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UrlRecord.cs",
+              "DocumentMoniker": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Domain\\UrlRecord.cs",
+              "RelativeDocumentMoniker": "EncurtadorURL.Domain\\UrlRecord.cs",
+              "ToolTip": "C:\\Projetos\\C#\\EncurtadorUrl\\EncurtadorURL.Domain\\UrlRecord.cs",
+              "RelativeToolTip": "EncurtadorURL.Domain\\UrlRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T01:56:53.664Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

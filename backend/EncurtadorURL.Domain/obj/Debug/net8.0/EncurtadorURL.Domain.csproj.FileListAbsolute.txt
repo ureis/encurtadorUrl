@@ -1,0 +1,11 @@
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\bin\Debug\net8.0\EncurtadorURL.Domain.deps.json
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\bin\Debug\net8.0\EncurtadorURL.Domain.dll
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\bin\Debug\net8.0\EncurtadorURL.Domain.pdb
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.AssemblyInfoInputs.cache
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.AssemblyInfo.cs
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.dll
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\refint\EncurtadorURL.Domain.dll
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\EncurtadorURL.Domain.pdb
+C:\Projetos\C#\EncurtadorUrl\EncurtadorURL.Domain\obj\Debug\net8.0\ref\EncurtadorURL.Domain.dll

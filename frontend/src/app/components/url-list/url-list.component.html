@@ -1,0 +1,46 @@
+<div class="list-container">
+  <h2>URLs Encurtadas Recentes</h2>
+
+  <div *ngIf="loading" class="empty-state">
+    <p>Carregando URLs...</p>
+  </div>
+
+  <div *ngIf="!loading && error" class="empty-state">
+    <p>{{ error }}</p>
+  </div>
+
+  <div *ngIf="!loading && !error && shortUrls.length === 0" class="empty-state">
+    <p>Nenhuma URL encurtada ainda. Crie uma acima!</p>
+  </div>
+
+  <div *ngIf="!loading && !error && shortUrls.length > 0" class="url-list">
+    <div *ngFor="let item of shortUrls" class="url-item">
+      <div class="url-details">
+        <div class="short-code">
+          <span class="badge">{{ item.shortCode }}</span>
+        </div>
+        <div class="original-url">
+          <p class="label">Original:</p>
+          <p class="url">{{ item.originalUrl }}</p>
+        </div>
+        <div class="short-url">
+          <p class="label">Curta:</p>
+          <p class="url">{{ item.shortUrl }}</p>
+        </div>
+        <div class="created-at">
+          <p class="label">Criada em:</p>
+          <p class="date">{{ item.createdAt | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+        </div>
+      </div>
+
+      <div class="url-actions">
+        <button (click)="copyToClipboard(item.shortUrl)" class="btn btn-copy" title="Copiar URL curta">
+          Copiar
+        </button>
+        <button (click)="openShortUrl(item.shortUrl)" class="btn btn-open" title="Abrir URL curta">
+          Abrir
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

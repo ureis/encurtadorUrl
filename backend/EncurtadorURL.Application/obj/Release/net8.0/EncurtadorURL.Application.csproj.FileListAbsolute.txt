@@ -1,0 +1,11 @@
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\bin\Release\net8.0\EncurtadorURL.Application.deps.json
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\bin\Release\net8.0\EncurtadorURL.Application.dll
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\bin\Release\net8.0\EncurtadorURL.Application.pdb
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.AssemblyInfoInputs.cache
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.AssemblyInfo.cs
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.csproj.CoreCompileInputs.cache
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.dll
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\refint\EncurtadorURL.Application.dll
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\EncurtadorURL.Application.pdb
+C:\Projetos\C#\EncurtadorUrl\backend\EncurtadorURL.Application\obj\Release\net8.0\ref\EncurtadorURL.Application.dll

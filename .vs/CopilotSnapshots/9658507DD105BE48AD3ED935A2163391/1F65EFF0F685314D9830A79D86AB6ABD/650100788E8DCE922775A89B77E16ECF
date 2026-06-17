@@ -1,0 +1,55 @@
+﻿# EncurtadorURL
+
+API pequena de encurtamento de URLs construída com .NET 8.
+
+## Visão geral
+Esta solução fornece uma API web para criar e resolver URLs encurtadas. Projetos incluídos:
+- `EncurtadorURL.Api` — ASP.NET Core Web API
+- `EncurtadorURL.Application` — Interfaces e serviços de aplicação
+- `EncurtadorURL.Infrastructure` — `DbContext` do EF Core, repositórios, gerador de short code
+- `EncurtadorURL.Domain` — Modelos de domínio e interfaces de repositório
+
+## Pré-requisitos
+- .NET 8 SDK
+- Visual Studio 2022 (ou superior) ou `dotnet` CLI
+- Um banco de dados suportado pelo EF Core (ex.: SQLite ou SQL Server)
+
+## Build & Execução
+Usando Visual Studio 2022:
+1. Abra a solução
+2. Defina `EncurtadorURL.Api` como projeto de inicialização
+3. Execute (F5) ou Debug > Start Debugging
+
+Usando `dotnet` CLI:
+````````
+dotnet build
+dotnet run --project EncurtadorURL.Api
+````````
+
+## Banco de dados / Migrações
+Se o projeto usar migrações do EF Core:
+Ajuste o provedor e a connection string em `appsettings.Development.json` ou via variáveis de ambiente.
+
+## Endpoints da API
+- `POST /api/url` — Cria uma URL encurtada. Recebe JSON com o campo `originalUrl`.
+- `GET /{shortCode}` — Redireciona para a URL original correspondente ao `shortCode`.
+- `GET /api/url/{id}` — Recupera detalhes do registro de URL (se implementado).
+
+Consulte `EncurtadorURL.Api/Controllers/UrlController.cs` para rotas e esquemas exatos de request/response.
+
+## Configuração
+A configuração é lida de `appsettings.json` e variáveis de ambiente. Ajuste os seguintes valores conforme necessário:
+- `ConnectionStrings:DefaultConnection`
+- Configurações do gerador de short code (tamanho, alfabeto) se existirem
+
+## Testes
+Execute os testes (se houver) com:
+````````
+dotnet test
+````````
+
+## Contribuição
+Veja `CONTRIBUTING.md` para diretrizes de contribuição.
+
+## Licença
+Adicione um arquivo `LICENSE` na raiz do repositório (ex.: MIT) e atualize esta seção.
